@@ -1,0 +1,30 @@
+//-------------Links top navbar
+.navbar__list{
+  display: flex;
+  position: absolute; 
+  right: 30px;
+  top: 15px;
+  li{
+    margin: 0 30px;
+    list-style: none;
+    a{
+      text-decoration: none;
+      font-size: 2em;
+      text-shadow: 0px 0px 35px $color-darkgrey;
+      &:hover{
+        font-size: 2.15em;
+        transition-duration: 500ms;
+      }
+    }
+  }
+}
+//---------Icons
+.hero__icons{
+  margin-top: 40px;
+  a{
+    text-decoration: none;
+    i:hover{
+      color: $color-lightgrey;
+    }
+  }
+}

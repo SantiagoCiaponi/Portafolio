@@ -1,0 +1,28 @@
+/*---------------------------------------------------
+    $COLORS
+---------------------------------------------------*/
+
+//_______Branding Colors
+
+$color-black: #000000;
+$color-darkgrey: #404040;
+$color-grey: #777777;
+$color-lightgrey: #bfbfbf;
+$color-white: #ffffff;
+
+//_______Texturas
+$color-alert: rgb(253, 228, 207);
+$color-error: rgb(218, 79, 73);
+$color-info: rgb(66, 184, 221);
+$color-sucsess: rgb(91, 183, 91);
+
+//_______Tipografias
+$basefont: "Quicksand", sans-serif;
+$basefontsize: 16px;
+
+$buttoncolor: $color-white;
+$buttonfontsize: $basefontsize * 1.5;
+
+//_______Constantes
+$border-radius: 3px;
+$padding: 24px;
