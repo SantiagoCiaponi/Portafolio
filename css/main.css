@@ -16,14 +16,117 @@ body {
   background-color: #fffefa;
 }
 
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay__title {
+  position: relative;
+  bottom: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.overlay h1 {
+  position: relative;
+  z-index: 20;
+  font-size: 5em;
+  font-weight: 400;
+  color: #404040;
+  animation-name: title;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.overlay h2 {
+  font-size: 3em;
+  font-weight: 400;
+  color: #404040;
+  z-index: 20;
+  animation-name: title;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.overlay .hero__icons {
+  opacity: 0;
+}
+
+@keyframes title {
+  from {
+    color: #404040;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-color: #ffffff;
+  z-index: 15;
+  animation-name: left;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 15;
+  animation-name: right;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes right {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes left {
+  from {
+    right: 50%;
+  }
+  to {
+    right: 100%;
+  }
+}
+.hide {
+  display: none;
+}
+
+.background {
+  background-image: url("../assets/img/cafe.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .hero {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-image: url("../assets/img/cafe.png");
-  background-size: cover;
-  background-position: center;
 }
 .hero__title {
   position: relative;
@@ -42,51 +145,67 @@ body {
   font-weight: 400;
 }
 
-.blogs {
+.wrapper {
   height: 90vh;
 }
-.blogs__title {
+.wrapper__title {
   padding-top: 15px;
   padding-left: 100px;
 }
-.blogs h1 {
+.wrapper h1 {
   color: #404040;
   font-size: 3em;
   margin: 10px;
 }
 
-.blogs__articles {
+.wrapper__articles {
   width: 100%;
   display: grid;
-  grid-template-columns: 30% 50%;
   justify-content: space-evenly;
   padding-top: 60px;
   color: #404040;
 }
 
-.blogs__container {
+.blogs {
+  grid-template-columns: 50% 30%;
+}
+
+.projets {
+  grid-template-columns: 25% 55%;
+}
+
+.wrapper__container {
   position: relative;
   box-shadow: 0px 2px 4px 2px #bfbfbf;
-  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 }
-.blogs__container p {
+.wrapper__container p {
   width: 90%;
   color: #404040;
   text-align: center;
+  margin-bottom: 35px;
 }
-.blogs__container img {
-  position: absolute;
-  bottom: 25px;
+.wrapper__container img {
   width: 85%;
 }
-.blogs__container h2 {
+.wrapper__container h2 {
   color: #404040;
 }
-.blogs__container h2 a {
+.wrapper__container h2 a {
   color: #404040;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+footer h1 {
+  color: #404040;
+  font-size: 4em;
 }
 
 .navbar__list {
@@ -106,7 +225,7 @@ body {
 }
 .navbar__list li a:hover {
   font-size: 2.15em;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 }
 
 .hero__icons {
@@ -119,6 +238,93 @@ body {
   color: #bfbfbf;
 }
 
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 12px;
+  }
+
+  .hero__icons [class^=flaticon-]:before {
+    font-size: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .wrapper {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .blogs {
+    grid-template-columns: 75%;
+  }
+
+  .projets {
+    grid-template-columns: 80%;
+    padding-top: 30px;
+    gap: 30px;
+  }
+
+  div img.width {
+    width: 100%;
+  }
+
+  .margin-bottom {
+    margin-bottom: 40px;
+  }
+
+  .wrapper__container h2 {
+    font-size: 2em;
+  }
+  .wrapper__container p {
+    font-size: 1.3em;
+  }
+
+  div.margin-y {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 475px) {
+  body {
+    font-size: 10px;
+  }
+
+  .navbar__list {
+    width: 86%;
+    justify-content: center;
+  }
+  .navbar__list li {
+    margin: 10px;
+  }
+  .navbar__list li a {
+    font-size: 2em;
+    margin: 10px;
+  }
+
+  .hero__icons {
+    margin-top: 40px;
+  }
+  .hero__icons [class^=flaticon-]:before {
+    font-size: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .wrapper__container h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+  .wrapper__container p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+}
 .margin-x {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -127,6 +333,15 @@ body {
 .margin-y {
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+.margin-title {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.padding {
+  padding: 15px;
 }
 
 .padding-x {
@@ -147,4 +362,12 @@ body {
 .padding-small-y {
   padding-bottom: 15px;
   padding-top: 15px;
+}
+
+img.width {
+  width: 95%;
+}
+
+.color__black {
+  color: #404040;
 }

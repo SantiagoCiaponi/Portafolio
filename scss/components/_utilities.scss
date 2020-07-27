@@ -6,6 +6,14 @@
   margin-top: 30px;
   margin-bottom: 20px;
 }
+.margin-title{
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.padding{
+  padding: 15px;
+}
+
 .padding-x{
   padding-left: 30px;
   padding-right: 30px;
@@ -21,4 +29,10 @@
 .padding-small-y{
   padding-bottom: 15px;
   padding-top: 15px;
+}
+img.width{
+  width: 95%;
+}
+.color__black{
+  color: $color-darkgrey;
 }

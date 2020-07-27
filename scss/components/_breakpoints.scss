@@ -1,0 +1,83 @@
+@media screen and(max-width: 1200px){
+  body{
+    font-size: 12px;
+  }   
+  .hero__icons [class^="flaticon-"]:before{   
+    font-size: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .wrapper{
+    height: auto;
+    padding: 20px 0;
+  }
+  .blogs{
+  grid-template-columns: 75%;
+  }
+  .projets{
+  grid-template-columns: 80%;
+  padding-top: 30px;
+  gap: 30px;
+}
+div img.width{
+  width: 100%;
+}
+
+  .margin-bottom{
+    margin-bottom: 40px;
+  }
+  .wrapper__container {
+    h2{
+    font-size: 2em;
+    }
+    p{
+      font-size: 1.3em;
+    }
+  }
+  div.margin-y{
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media screen and(max-width: 768px){
+  .wrapper__container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and(max-width:475px){
+  body{
+    font-size: 10px;
+  }
+  .navbar__list {
+    width: 86%;
+    justify-content: center;
+    li{
+    margin: 10px;
+      a{
+      font-size: 2em;
+      margin: 10px;
+      }
+    }
+  }
+  .hero__icons {
+    margin-top: 40px;
+    [class^="flaticon-"]:before{   
+      font-size: 40px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+    .wrapper__container {
+    h2{
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    }
+    p{
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -25,10 +25,10 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 50px;
-font-style: normal;
-margin-left: 20px;
-margin-right: 20px;
+  font-size: 3rem;
+  font-style: normal;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .flaticon-facebook:before { content: "\f100"; }
