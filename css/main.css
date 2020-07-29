@@ -117,7 +117,7 @@ body {
 }
 
 .background {
-  background-image: url("../assets/img/cafe.png");
+  background-image: url("../assets/img/cafe.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -323,6 +323,10 @@ footer h1 {
   .wrapper__container p {
     font-size: 1.3em;
     margin-bottom: 20px;
+  }
+
+  .wrapper__container img {
+    width: 95%;
   }
 }
 .margin-x {

@@ -18,11 +18,10 @@
   grid-template-columns: 80%;
   padding-top: 30px;
   gap: 30px;
-}
-div img.width{
+  }
+  div img.width{
   width: 100%;
-}
-
+  }
   .margin-bottom{
     margin-bottom: 40px;
   }
@@ -79,5 +78,8 @@ div img.width{
       font-size: 1.3em;
       margin-bottom: 20px;
     }
+  }
+  .wrapper__container img{
+    width: 95%;
   }
 }
