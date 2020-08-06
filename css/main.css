@@ -50,7 +50,7 @@ body {
   font-size: 3em;
   font-weight: 400;
   color: #404040;
-  z-index: 20;
+  z-index: 30;
   animation-name: title;
   animation-delay: 1s;
   animation-duration: 2s;
